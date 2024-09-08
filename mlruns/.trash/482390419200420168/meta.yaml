@@ -1,0 +1,7 @@
+artifact_location: mlflow-artifacts:/482390419200420168
+creation_time: 1725763584223
+experiment_id: '482390419200420168'
+last_update_time: 1725825610000
+lifecycle_stage: deleted
+name: prediction_Models
+tags: {}

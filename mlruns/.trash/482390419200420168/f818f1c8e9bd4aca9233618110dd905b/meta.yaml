@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/482390419200420168/f818f1c8e9bd4aca9233618110dd905b/artifacts
+deleted_time: 1725825610000
+end_time: 1725780976693
+entry_point_name: ''
+experiment_id: '482390419200420168'
+lifecycle_stage: deleted
+run_id: f818f1c8e9bd4aca9233618110dd905b
+run_name: Regression Logistique
+run_uuid: f818f1c8e9bd4aca9233618110dd905b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725780971938
+status: 3
+tags: []
+user_id: nar6d

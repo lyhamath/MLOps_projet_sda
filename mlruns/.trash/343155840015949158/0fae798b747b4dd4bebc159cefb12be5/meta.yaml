@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/343155840015949158/0fae798b747b4dd4bebc159cefb12be5/artifacts
+deleted_time: 1725825602461
+end_time: null
+entry_point_name: ''
+experiment_id: '343155840015949158'
+lifecycle_stage: deleted
+run_id: 0fae798b747b4dd4bebc159cefb12be5
+run_name: gifted-colt-379
+run_uuid: 0fae798b747b4dd4bebc159cefb12be5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725824849741
+status: 1
+tags: []
+user_id: nar6d

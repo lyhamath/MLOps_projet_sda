@@ -1,0 +1,16 @@
+artifact_uri: mlflow-artifacts:/917315291385343525/a37a4afa344d4cb3ba1b1fba893e7608/artifacts
+deleted_time: 1725825606723
+end_time: null
+entry_point_name: ''
+experiment_id: '917315291385343525'
+lifecycle_stage: deleted
+run_id: a37a4afa344d4cb3ba1b1fba893e7608
+run_name: sassy-squirrel-574
+run_uuid: a37a4afa344d4cb3ba1b1fba893e7608
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725823575126
+status: 1
+tags: []
+user_id: nar6d

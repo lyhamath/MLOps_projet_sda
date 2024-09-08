@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/431132118639810890/f67f18a878104398905f687ef4479c26/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '431132118639810890'
+lifecycle_stage: active
+run_id: f67f18a878104398905f687ef4479c26
+run_name: brawny-ape-346
+run_uuid: f67f18a878104398905f687ef4479c26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725826150871
+status: 1
+tags: []
+user_id: nar6d

@@ -1,0 +1,13 @@
+artifact_location: mlflow-artifacts:/917315291385343525
+creation_time: 1725823163513
+experiment_id: '917315291385343525'
+last_update_time: 1725825606723
+lifecycle_stage: deleted
+name: log_Models
+tags:
+  cours: MLOps
+  mlflow.note.content: Prediction des defaut de paiement de credit. Cette experience
+    est une premier construction et évalution du modéle.
+  nom_du_projet: Prediction defaut de paiment
+  project_quarter: Q3-2024
+  team: dky

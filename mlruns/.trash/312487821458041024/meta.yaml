@@ -1,0 +1,13 @@
+artifact_location: file:///c:/Users/nar6d/Desktop/MLOpsProject/mlruns/312487821458041024
+creation_time: 1725761285034
+experiment_id: '312487821458041024'
+last_update_time: 1725825622583
+lifecycle_stage: deleted
+name: Logistic-RandomForest
+tags:
+  cours: MLOps
+  mlflow.note.content: Prediction des defaut de paiement de credit. Cette experience
+    est une premier construction et évalution du modéle.
+  nom_du_projet: Prediction defaut de paiment
+  project_quarter: Q3-2024
+  team: dky
