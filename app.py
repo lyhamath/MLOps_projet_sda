@@ -5,7 +5,8 @@ import pandas as pd
 
 app = Flask(__name__)
 
-model = pickle.load("Model_Logistic.pkl")
+with open("Model_Logistic.pkl", "rb") as f:
+    model = pickle.load(f)
 
 def model_pred(features):
     test_data = pd.DataFrame([features])
