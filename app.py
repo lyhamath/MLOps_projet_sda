@@ -4,7 +4,7 @@ import pandas as pd
 
 
 app = Flask(__name__)
-#model = pickle.load(open("Model_Logistic.pkl", "rb"))
+
 model = load("Model_Logistic.pkl")
 
 def model_pred(features):
