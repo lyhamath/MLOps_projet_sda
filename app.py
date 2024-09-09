@@ -1,12 +1,11 @@
 from flask import Flask, render_template, request
-import pickle
+import joblib
 import pandas as pd
-
 
 app = Flask(__name__)
 
-with open("Model_Logistic.pkl", "rb") as f:
-    model = pickle.load(f)
+# Charger le modèle avec joblib
+model = joblib.load('Model_Logistic.pkl')
 
 def model_pred(features):
     test_data = pd.DataFrame([features])
