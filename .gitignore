@@ -1,3 +1,4 @@
 *.log
-venv/  # ignorer l'environement virtuelle
+venv/ 
+# ignorer l'environement virtuelle
 model/

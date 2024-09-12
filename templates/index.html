@@ -4,152 +4,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>Predictive Solvability</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .form-control {
+            border-radius: 10px;
+            padding: 15px;
+            transition: box-shadow 0.3s;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+            border-color: #007bff;
+        }
+
+        .btn {
+            border-radius: 30px;
+            padding: 12px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            background-color: #007bff;
+            color: white;
+            transition: background-color 0.3s, box-shadow 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+        }
+
+        .text-success {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        h2 {
+            font-weight: 600;
+        }
+
+        .container {
+            max-width: 600px;
+        }
+    </style>
+</head>
 
 <body>
 
-    <div style="color:blue">
-        <form action="{{ url_for('predict')}}" method="post">
-            <h2>Predictive Analysis</h2>
-            <h3>credit_lines_outstanding</h3><input id="first" name="credit_lines_outstanding" type="number " required="required">
-            <h3>loan_amt_outstanding</h3><input id="second" name="loan_amt_outstanding" required="required">
-            <h3>total_debt_outstanding</h3><input id="third" name="total_debt_outstanding" required="required">
-            <h3>income</h3><input id="fourth" name="income" required="required">
-            <h3>years_employed</h3><input id="fifth" name="years_employed" required="required">
-            <h3>fico_score</h3><input id="sixth" name="fico_score" required="required">
-            <br><br><button id="sub" type="submit ">Result</button>
-            <br>
+    <div class="container mt-5">
+        <div class="card shadow-lg p-4">
+            <div class="card-body">
+                <h2 class="text-center text-primary mb-4">Predictive Solvability</h2>
+                <form action="{{ url_for('predict') }}" method="post" class="mt-4">
 
-        </form>
+                    <div class="mb-3">
+                        <label for="credit_lines_outstanding" class="form-label">Credit Lines Outstanding</label>
+                        <input id="first" name="credit_lines_outstanding" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
 
-        <br><br><h3>{{ prediction_text }}<h3>
+                    <div class="mb-3">
+                        <label for="loan_amt_outstanding" class="form-label">Loan Amount Outstanding</label>
+                        <input id="second" name="loan_amt_outstanding" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="total_debt_outstanding" class="form-label">Total Debt Outstanding</label>
+                        <input id="third" name="total_debt_outstanding" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="income" class="form-label">Income</label>
+                        <input id="fourth" name="income" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="years_employed" class="form-label">Years Employed</label>
+                        <input id="fifth" name="years_employed" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
+
+
+                    <div class="mb-3">
+                        <label for="fico_score" class="form-label">FICO Score</label>
+                        <input id="sixth" name="fico_score" type="number" class="form-control" placeholder="Enter value" required>
+                    </div>
+
+                    <div class="d-grid">
+                        <button id="sub" type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+
+                <div class="mt-4 text-center">
+                    <h5 class="text-success">{{ prediction_text }}</h5>
+                </div>
+            </div>
+        </div>
     </div>
 
-
-    <style>
-        body {
-            background-color: lightslategray;
-            text-align: center;
-            padding: 0px;
-        }
-        
-        #research {
-            font-size: 18px;
-            width: 100px;
-            height: 23px;
-            top: 23px;
-        }
-        
-        #box {
-            border-radius: 60px;
-            border-color: 45px;
-            border-style: solid;
-            font-family: cursive;
-            text-align: center;
-            background-color: rgb(168, 131, 61);
-            font-size: medium;
-            position: absolute;
-            width: 700px;
-            bottom: 9%;
-            height: 850px;
-            right: 30%;
-            padding: 0px;
-            margin: 0px;
-            font-size: 14px;
-        }
-        
-        #fuel {
-            width: 83px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 20px;
-        }
-        
-        #fuel:hover {
-            background-color: coral;
-        }
-        
-        #research {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #research:hover {
-            background-color: coral;
-        }
-        
-        #resea {
-            width: 99px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #resea:hover {
-            background-color: coral;
-        }
-        
-        #sub {
-            width: 120px;
-            height: 43px;
-            text-align: center;
-            border-radius: 14px;
-            font-size: 18px;
-        }
-        
-        #sub:hover {
-            background-color: darkcyan;
-        }
-        
-        #first {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #second {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #third {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-        
-        #fourth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #fifth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        #sixth {
-            border-radius: 14px;
-            height: 25px;
-            font-size: 20px;
-            text-align: center;
-        }
-    </style>
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
